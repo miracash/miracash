@@ -16,6 +16,7 @@ public class Block
         Header.TimeStamp = timestamp;
         Transactions = transactions;
         Header.Nonce = nonce;
+        Header.MerkleRoot = MerkleTree.CalculateMerkleRoot(transactions);
     }
     public string CalculateHash()
     {

@@ -11,7 +11,6 @@ public class Program
         
         blockchain.MineBlock();
 
-
         Console.WriteLine("Balance of lead: " + blockchain.GetBalance("lead"));
         Console.WriteLine("Balance of Bob: " + blockchain.GetBalance("Bob"));
         Console.WriteLine("Balance of Charlie: " + blockchain.GetBalance("Charlie"));
