@@ -4,15 +4,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57EB4560-486
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F2351A54-27E3-4409-B8DE-8A09CA7446CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.Common", "src\MiraCash.Common\MiraCash.Common.csproj", "{A6A1FCA6-4DB3-437D-8F56-00590D0F87D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miranium.Common", "src\Miranium.Common\Miranium.Common.csproj", "{A6A1FCA6-4DB3-437D-8F56-00590D0F87D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.Node", "src\MiraCash.Node\MiraCash.Node.csproj", "{7B86EEF8-34EB-4D74-B899-DCB6CFFD3178}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miranium.Node", "src\Miranium.Node\Miranium.Node.csproj", "{7B86EEF8-34EB-4D74-B899-DCB6CFFD3178}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.NodeLogics", "src\MiraCash.NodeLogics\MiraCash.NodeLogics.csproj", "{4EAAEB81-1B7E-4DAA-B4AB-F7CC95C35EBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miranium.NodeLogics", "src\Miranium.NodeLogics\Miranium.NodeLogics.csproj", "{4EAAEB81-1B7E-4DAA-B4AB-F7CC95C35EBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.Blockchain", "src\MiraCash.Blockchain\MiraCash.Blockchain.csproj", "{8ED74A22-3B4F-4335-A7F2-0466252E146A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miranium.Blockchain", "src\Miranium.Blockchain\Miranium.Blockchain.csproj", "{8ED74A22-3B4F-4335-A7F2-0466252E146A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.Test.Blockchain", "tests\MiraCash.Test.Blockchain\MiraCash.Test.Blockchain.csproj", "{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miranium.Test.Blockchain", "tests\Miranium.Test.Blockchain\Miranium.Test.Blockchain.csproj", "{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miranium.Wallet", "src\Miranium.Wallet\Miranium.Wallet.csproj", "{6C4B4D5E-9965-4672-B634-62FEC67E71B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,7 @@ Global
 		{4EAAEB81-1B7E-4DAA-B4AB-F7CC95C35EBC} = {57EB4560-4867-4828-85BB-B6FD684D56E5}
 		{8ED74A22-3B4F-4335-A7F2-0466252E146A} = {57EB4560-4867-4828-85BB-B6FD684D56E5}
 		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F} = {F2351A54-27E3-4409-B8DE-8A09CA7446CB}
+		{6C4B4D5E-9965-4672-B634-62FEC67E71B2} = {57EB4560-4867-4828-85BB-B6FD684D56E5}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A6A1FCA6-4DB3-437D-8F56-00590D0F87D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -47,5 +50,9 @@ Global
 		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4B4D5E-9965-4672-B634-62FEC67E71B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4B4D5E-9965-4672-B634-62FEC67E71B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4B4D5E-9965-4672-B634-62FEC67E71B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4B4D5E-9965-4672-B634-62FEC67E71B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
