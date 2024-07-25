@@ -9,9 +9,17 @@ public class Block
     public BlockHeader Header { get; set; }
     public List<Transaction> Transactions { get; set; }
 
+    public Block(string previousHash, string timestamp, List<Transaction> transactions, int nonce = 0)
+    {
+        Header = new BlockHeader();
+        Header.PreviousHash = previousHash;
+        Header.TimeStamp = timestamp;
+        Transactions = transactions;
+        Header.Nonce = nonce;
+    }
     public string CalculateHash()
     {
-        string raw = $"{Header.TimeStamp}{Header.MerkleRoot}{Header.PreviousHash}";
+        string raw = $"{Header.TimeStamp}{Header.MerkleRoot}{Header.PreviousHash}{Header.Nonce}";
         foreach (var transaction in Transactions)
         {
             string transactionDataRaw = $"{transaction.From}{transaction.To}{transaction.Value}";
