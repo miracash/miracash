@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.NodeLogics", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.Blockchain", "src\MiraCash.Blockchain\MiraCash.Blockchain.csproj", "{8ED74A22-3B4F-4335-A7F2-0466252E146A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiraCash.Test.Blockchain", "tests\MiraCash.Test.Blockchain\MiraCash.Test.Blockchain.csproj", "{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,7 @@ Global
 		{7B86EEF8-34EB-4D74-B899-DCB6CFFD3178} = {57EB4560-4867-4828-85BB-B6FD684D56E5}
 		{4EAAEB81-1B7E-4DAA-B4AB-F7CC95C35EBC} = {57EB4560-4867-4828-85BB-B6FD684D56E5}
 		{8ED74A22-3B4F-4335-A7F2-0466252E146A} = {57EB4560-4867-4828-85BB-B6FD684D56E5}
+		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F} = {F2351A54-27E3-4409-B8DE-8A09CA7446CB}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A6A1FCA6-4DB3-437D-8F56-00590D0F87D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,5 +43,9 @@ Global
 		{8ED74A22-3B4F-4335-A7F2-0466252E146A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ED74A22-3B4F-4335-A7F2-0466252E146A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ED74A22-3B4F-4335-A7F2-0466252E146A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3CFCFA-20AD-4E3A-821B-6F339DF71E9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
