@@ -1,4 +1,4 @@
-namespace MiraCash.Blockchain;
+namespace Miranium.Blockchain;
 
 public class Blockchain
 {
@@ -6,19 +6,19 @@ public class Blockchain
     private List<Transaction> transactionPool { get; set; }
     private int _difficulty;
 
-    public Blockchain()
+    public Blockchain(string genAdrr)
     {
-        Blocks = new List<Block>() { CreateGenesisBlock() };
+        Blocks = new List<Block>() { CreateGenesisBlock(genAdrr) };
         transactionPool = new List<Transaction>();
-        _difficulty = 7;
+        _difficulty = 4;
     }
-    private Block CreateGenesisBlock()
+    private Block CreateGenesisBlock(string genAdrr)
     {
-        return new Block("0", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), new List<Transaction> { new Transaction("System", "lead", 200) });
+        return new Block("0", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), new List<Transaction> { new Transaction("System", genAdrr, 200) });
     }
-    public bool AddTransaction(Transaction transaction)
+    public bool AddTransaction(Transaction transaction, string publicKey, string data, string signedData, string adress)
     {
-        if (!CheckTransactionIntegrity(transaction))
+        if (!CheckTransactionIntegrity(transaction, publicKey, data, signedData, adress))
         {
             return false;
         }
@@ -47,10 +47,15 @@ public class Blockchain
         }
         return true;
     }
-    private bool CheckTransactionIntegrity(Transaction transaction)
+    private bool CheckTransactionIntegrity(Transaction transaction, string publicKey, string data, string signedData, string adress)
     {
-        decimal balance = GetBalance(transaction.From);
-        return balance >= transaction.Value;
+        if (Wallet.Wallet.VerifySignedData(data, signedData, publicKey) 
+            && Wallet.Wallet.CheckAdressValidityWithPublickKey(publicKey, transaction.FromAdress))
+        {
+            decimal balance = GetBalance(transaction.FromAdress);
+            return balance >= transaction.Value;
+        }
+        return false;
     }
     public void DisplayBlockchain()
     {
@@ -84,11 +89,11 @@ public class Blockchain
         {
             foreach (var transaction in block.Transactions)
             {
-                if (adress == transaction.From)
+                if (adress == transaction.FromAdress)
                 {
                     balance -= transaction.Value;
                 }
-                if (adress == transaction.To)
+                if (adress == transaction.ToAdress)
                 {
                     balance += transaction.Value;
                 }
