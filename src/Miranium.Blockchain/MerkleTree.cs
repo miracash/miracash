@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MiraCash.Blockchain;
+namespace Miranium.Blockchain;
 
 public class MerkleTree
 {
