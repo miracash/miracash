@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Miranium.Wallet\Miranium.Wallet.csproj" />
+    </ItemGroup>
+
 </Project>
