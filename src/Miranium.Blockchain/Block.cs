@@ -2,7 +2,7 @@ using System.Runtime.Intrinsics.Arm;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MiraCash.Blockchain;
+namespace Miranium.Blockchain;
 
 public class Block
 {
@@ -23,7 +23,7 @@ public class Block
         string raw = $"{Header.TimeStamp}{Header.MerkleRoot}{Header.PreviousHash}{Header.Nonce}";
         foreach (var transaction in Transactions)
         {
-            string transactionDataRaw = $"{transaction.From}{transaction.To}{transaction.Value}";
+            string transactionDataRaw = $"{transaction.FromAdress}{transaction.ToAdress}{transaction.Value}";
             raw += transactionDataRaw;
         }
         using (SHA256 sha256 = SHA256.Create())
