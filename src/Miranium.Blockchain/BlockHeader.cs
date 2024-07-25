@@ -1,4 +1,4 @@
-namespace MiraCash.Blockchain;
+namespace Miranium.Blockchain;
 
 public class BlockHeader
 {
